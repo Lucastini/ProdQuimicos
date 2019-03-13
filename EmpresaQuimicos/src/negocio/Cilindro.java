@@ -40,7 +40,7 @@ public class Cilindro extends Envase{
     
     @Override
     public String toString(){
-        return super.toString()+", Forma del envase: Cilindro, dimencion de la base: "+diametroBase+", Altura: "+altura;
+        return super.toString()+", Forma del envase: Cilindro, dimencion de la base: "+diametroBase+"cm, Altura: "+altura+"cm";
     }
     
     private float radio(){
@@ -55,9 +55,5 @@ public class Cilindro extends Envase{
         return altura*supBaseCilindro();
     }
     
-    @Override
-    public String todosLosDatos(){
-        return todosLosDatos()+", Forma del envase: Cilindro, dimencion de la base: "+diametroBase+", Altura: "+altura;
-    }
-    
+   
 }

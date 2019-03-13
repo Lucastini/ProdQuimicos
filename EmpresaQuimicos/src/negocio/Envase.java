@@ -60,11 +60,14 @@ public abstract class Envase {
     public abstract float volumen();
     
     public float pesoLleno(){
-        return pesoVacio+volumen()*sustancia.getDensidad();
+        float pesoL=pesoVacio;
+        if(sustancia!=null)
+            pesoL+=volumen()*sustancia.getDensidad();
+        return pesoL;
     }
     
     public String todosLosDatos(){
-        return toString()+"\n\tOtros datos: Volumen: "+volumen()+", Peso lleno: "+pesoLleno();
+        return toString()+"\n\tOtros datos: Volumen: "+volumen()+"cm3, Peso lleno: "+pesoLleno()+"gr";
     }
     
     

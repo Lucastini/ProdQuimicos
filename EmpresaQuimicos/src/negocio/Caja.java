@@ -62,7 +62,7 @@ public class Caja {
             aux+="\n"+iter.todosLosDatos();
         if(aux.equals(aux2))
             aux+="\nLa caja aun no tiene envases en su interior";
-        return aux+"\nOtros datos de la caja: Peso total: "+pesoTotal()+", Cant. cubos: "+cantEnvasesTipoCubo()+", Cant. cilindros: "+cantEnvasesTipoCilibdro();
+        return aux+"\nOtros datos de la caja: Peso total: "+pesoTotal()+", Cant. cubos: "+cantEnvasesTipoCubo()+", Cant. cilindros: "+cantEnvasesTipoCilibdro()+", Diametro promedio de cilindros: "+diametroPromedioCilindros()+"cm";
     }
     
     public float pesoTotal(){

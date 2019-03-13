@@ -38,9 +38,6 @@ public class Cubo extends Envase{
         return super.toString()+", Forma del envase: Cuadrado, dimencion del lado: "+lado+"cm";
     }
     
-    @Override
-    public String todosLosDatos(){
-        return super.todosLosDatos()+", Forma del envase: Cuadrado, dimencion del lado: "+lado+"cm";
-    }
+    
             
 }
