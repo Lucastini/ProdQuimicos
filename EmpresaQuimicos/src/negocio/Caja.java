@@ -14,7 +14,7 @@ import java.util.LinkedList;
 public class Caja {
     private int codigo;
     private float resistencia;
-    private LinkedList<Envase> envases;
+    private LinkedList<Envase> envases=null;
     
     public Caja(int cod, float resis){
         codigo=cod;
@@ -45,8 +45,9 @@ public class Caja {
         this.resistencia = resistencia;
     }
     
+    @Override
     public String toString(){
-        String aux2, aux="Codigo: "+codigo+", Resistencia: "+resistencia+"gr, Datos de los ENVASES:";
+        String aux2, aux="Caja codigo: "+codigo+", Resistencia: "+resistencia+"gr, Datos de los ENVASES:";
         aux2=aux;
         for(Envase iter:envases)
             aux+="\n"+iter.toString();
@@ -56,13 +57,13 @@ public class Caja {
     }
     
     public String todosLosDatos(){
-        String aux2, aux="Codigo: "+codigo+", Resistencia: "+resistencia+"gr, Datos de los ENVASES:";
+        String aux2, aux="Caja codigo: "+codigo+", Resistencia: "+resistencia+"gr, Datos de los ENVASES:";
         aux2=aux;
         for(Envase iter:envases)
             aux+="\n"+iter.todosLosDatos();
         if(aux.equals(aux2))
             aux+="\nLa caja aun no tiene envases en su interior";
-        return aux+"\nOtros datos de la caja: Peso total: "+pesoTotal()+", Cant. cubos: "+cantEnvasesTipoCubo()+", Cant. cilindros: "+cantEnvasesTipoCilibdro()+", Diametro promedio de cilindros: "+diametroPromedioCilindros()+"cm";
+        return aux+"\nOtros datos de la caja: Peso total: "+pesoTotal()+", Cant. cubos: "+cantEnvasesTipoCubo()+", Cant. cilindros: "+cantEnvasesTipoCilibdro()+", Diametro promedio de cilindros: "+diametroPromedioCilindros()+"cm\n";
     }
     
     public float pesoTotal(){

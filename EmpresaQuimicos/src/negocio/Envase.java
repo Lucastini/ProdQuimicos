@@ -49,7 +49,7 @@ public abstract class Envase {
     
     @Override
     public String toString(){
-        String aux="Codigo: "+codigo+", Peso vacio: "+pesoVacio+"g, DATOS DE LA SUSTANCIA: ";
+        String aux="Envase codigo: "+codigo+", Peso vacio: "+pesoVacio+"g, DATOS DE LA SUSTANCIA: ";
         if(sustancia!=null)
             aux+=sustancia.toString();
         else

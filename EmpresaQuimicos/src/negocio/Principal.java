@@ -101,9 +101,18 @@ public class Principal {
         System.out.println(caj3.todosLosDatos());
         System.out.println("eliminando envase 7 de caja 3"+caj3.removeEnvase(7));
         System.out.println(caj3.todosLosDatos());
-
-
+               
+        Camion cam1,cam2;
+        cam1=new Camion("Ford");
+        System.out.println("\n\n"+cam1.todosLosDatos());
         
+        System.out.println("\nAgregando caja 1: "+cam1.addCaja(caj1));
+        System.out.println("Agregando caja 1: "+cam1.addCaja(caj1));
+        System.out.println("Agregando caja 2: "+cam1.addCaja(caj2));
+        System.out.println("Agregando caja 3: "+cam1.addCaja(caj3));
+        System.out.println("Agregando caja 1: "+cam1.addCaja(caj1));
+        System.out.println("Agregando caja 3: "+cam1.addCaja(caj3));
+        System.out.println("\n\n"+cam1.todosLosDatos());
         
     }
     
