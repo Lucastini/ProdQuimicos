@@ -108,18 +108,14 @@ public class Camion {
     
     public float diametroPromedioCilindros(){
         float prom=0f;
-        float acumPromDiam=0f;
-        float diamPromCaja=0f;
-        int cantCajasConCilindros=0;
+        float acumDiam=0f;
+        float cantCilTot=0f;
         for(Caja iter:cajas){
-                diamPromCaja+=iter.diametroPromedioCilindros();
-                if(diamPromCaja>0){
-                    acumPromDiam+=diamPromCaja;
-                    cantCajasConCilindros++;
-                }
+            acumDiam+=iter.sumaDiametrosCilin();
+            cantCilTot=cantEnvasesTipoCilibdro();
             }
-        if(cantCajasConCilindros>0)
-            prom=acumPromDiam/cantCajasConCilindros;
+        if(cantCilTot>0)
+            prom=acumDiam/cantCilTot;
         return prom;
     }
     

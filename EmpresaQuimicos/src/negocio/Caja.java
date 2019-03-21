@@ -120,15 +120,17 @@ public class Caja {
         return cant;
     }
     
+    public float sumaDiametrosCilin(){
+        float sumDiam=0;
+        for(Envase iter:envases)
+            if(iter instanceof Cilindro)
+                sumDiam+=((Cilindro) iter).getDiametroBase();
+        return sumDiam;
+    }
     public float diametroPromedioCilindros(){
         float prom=0f;
-        float acumDiam=0f;
-        int cantCil=0;
-        for(Envase iter:envases)
-            if(iter instanceof Cilindro){
-                acumDiam+=((Cilindro) iter).getDiametroBase();
-                cantCil++;
-            }
+        float acumDiam=sumaDiametrosCilin();
+        int cantCil=cantEnvasesTipoCilibdro();
         if(cantCil>0)
             prom=acumDiam/cantCil;
         return prom;
